@@ -1,7 +1,5 @@
 library city_parser;
 
-export 'src/urls.dart';
-
 import 'dart:convert';
 
 import 'package:city_parser/src/models/suggestion_city_model.dart';
@@ -18,10 +16,7 @@ import 'src/currencies_list.dart';
 class CityParser {
   static Future<List<SuggestionCityModel>> getAutocompleteTips(
       String input) async {
-    List<int> decodedBytes = base64.decode(getTipsUrl);
-    String decodedStr = utf8.decode(decodedBytes);
-    final url = '$decodedStr$input';
-
+    final url = urlDecoder(input: input);
     final response = await http.get(Uri.parse(url));
     final jsonData = json.decode(response.body);
     final List<SuggestionCityModel> autocomplete = [];
@@ -36,14 +31,11 @@ class CityParser {
 
   static Future<CityModel> fetchCityInformation(int id,
       [String currency = 'USD']) async {
-    if (await isCurrencyValid(currency, getCurrenciesList()) == false) {
+    if (!getCurrenciesList().contains(currency)) {
       throw InvalidCurrencyException();
     }
 
-    List<int> decodedBytes = base64.decode(fetchCityInformationUrl);
-    String decodedStr = utf8.decode(decodedBytes);
-    var url = '$decodedStr$id';
-
+    var url = urlDecoder(id: id);
     var response = await http.get(Uri.parse(url));
     var document = parser.parse(response.body);
     final urlRow = document.querySelectorAll('link');

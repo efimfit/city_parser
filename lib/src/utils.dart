@@ -1,4 +1,7 @@
 import 'package:html/dom.dart';
+import 'dart:convert';
+
+import 'urls.dart';
 
 List<String> getCosts(List<Element> rowHtml) {
   List<String> data = [];
@@ -26,6 +29,19 @@ List<String> getEstimatedCosts(List<Element> rowHtml) {
   return data;
 }
 
-Future<bool> isCurrencyValid(String currency, List<String> currencies) async {
-  return currencies.contains(currency) ? true : false;
+String urlDecoder({int id = 0, String input = ''}) {
+  late List<int> decodedBytes;
+  late final String url;
+  late String decodedStr;
+  if (id != 0) {
+    decodedBytes = base64.decode(fetchCityInformationUrl);
+    decodedStr = utf8.decode(decodedBytes);
+    url = '$decodedStr$id';
+  } else {
+    decodedBytes = base64.decode(getTipsUrl);
+    decodedStr = utf8.decode(decodedBytes);
+    url = '$decodedStr$input';
+  }
+
+  return url;
 }

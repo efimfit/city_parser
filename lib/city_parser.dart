@@ -4,6 +4,7 @@ export 'src/urls.dart';
 
 import 'dart:convert';
 
+import 'package:city_parser/src/models/suggestion_city_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
 
@@ -13,30 +14,36 @@ import 'src/models/city_model.dart';
 import 'src/utils.dart';
 
 class CityParser {
-  static Future<List<String>> getAutocompleteTips(String input) async {
+  static Future<List<SuggestionCityModel>> getAutocompleteTips(
+      String input) async {
     List<int> decodedBytes = base64.decode(getTipsUrl);
     String decodedStr = utf8.decode(decodedBytes);
     final url = '$decodedStr$input';
 
     final response = await http.get(Uri.parse(url));
     final jsonData = json.decode(response.body);
-    final List<String> autocomplete = [];
+    final List<SuggestionCityModel> autocomplete = [];
 
     for (Map<String, dynamic> clue in jsonData) {
-      final tip = clue.values.first as String;
-      autocomplete.add(tip);
+      final label = clue['label'] as String;
+      final id = int.parse(clue['value']);
+      autocomplete.add(SuggestionCityModel(label: label, id: id));
     }
     return autocomplete;
   }
 
-  static Future<CityModel> fetchCityInformation(String cityName) async {
-    final city = trimCityName(cityName);
+  static Future<CityModel> fetchCityInformation(int id) async {
     List<int> decodedBytes = base64.decode(fetchCityInformationUrl);
     String decodedStr = utf8.decode(decodedBytes);
-    final url = '$decodedStr$city?displayCurrency=USD';
+    var url = '$decodedStr$id';
 
-    final response = await http.get(Uri.parse(url));
-    final document = parser.parse(response.body);
+    var response = await http.get(Uri.parse(url));
+    var document = parser.parse(response.body);
+    final urlRow = document.querySelectorAll('link');
+
+    url = '${urlRow[0].attributes['href']}?displayCurrency=USD';
+    response = await http.get(Uri.parse(url));
+    document = parser.parse(response.body);
     final allRowsHtml = document.querySelectorAll('tr');
 
     List<String>? estimatedCostsData;

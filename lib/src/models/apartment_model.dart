@@ -5,7 +5,7 @@ part 'apartment_model.freezed.dart';
 @freezed
 class ApartmentModel with _$ApartmentModel {
   const factory ApartmentModel({
-    required List<String> cityCenter,
-    required List<String> outsideCenter,
+    required List<String?> cityCenter,
+    required List<String?> outsideCenter,
   }) = _ApartmentModel;
 }

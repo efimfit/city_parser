@@ -16,8 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ChildCareModel {
-  List<String> get preschool => throw _privateConstructorUsedError;
-  List<String> get primarySchool => throw _privateConstructorUsedError;
+  List<String?> get preschool => throw _privateConstructorUsedError;
+  List<String?> get primarySchool => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ChildCareModelCopyWith<ChildCareModel> get copyWith =>
@@ -30,7 +30,7 @@ abstract class $ChildCareModelCopyWith<$Res> {
           ChildCareModel value, $Res Function(ChildCareModel) then) =
       _$ChildCareModelCopyWithImpl<$Res, ChildCareModel>;
   @useResult
-  $Res call({List<String> preschool, List<String> primarySchool});
+  $Res call({List<String?> preschool, List<String?> primarySchool});
 }
 
 /// @nodoc
@@ -53,11 +53,11 @@ class _$ChildCareModelCopyWithImpl<$Res, $Val extends ChildCareModel>
       preschool: null == preschool
           ? _value.preschool
           : preschool // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       primarySchool: null == primarySchool
           ? _value.primarySchool
           : primarySchool // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -70,7 +70,7 @@ abstract class _$$_ChildCareModelCopyWith<$Res>
       __$$_ChildCareModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<String> preschool, List<String> primarySchool});
+  $Res call({List<String?> preschool, List<String?> primarySchool});
 }
 
 /// @nodoc
@@ -91,11 +91,11 @@ class __$$_ChildCareModelCopyWithImpl<$Res>
       preschool: null == preschool
           ? _value._preschool
           : preschool // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       primarySchool: null == primarySchool
           ? _value._primarySchool
           : primarySchool // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -104,22 +104,22 @@ class __$$_ChildCareModelCopyWithImpl<$Res>
 
 class _$_ChildCareModel implements _ChildCareModel {
   const _$_ChildCareModel(
-      {required final List<String> preschool,
-      required final List<String> primarySchool})
+      {required final List<String?> preschool,
+      required final List<String?> primarySchool})
       : _preschool = preschool,
         _primarySchool = primarySchool;
 
-  final List<String> _preschool;
+  final List<String?> _preschool;
   @override
-  List<String> get preschool {
+  List<String?> get preschool {
     if (_preschool is EqualUnmodifiableListView) return _preschool;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_preschool);
   }
 
-  final List<String> _primarySchool;
+  final List<String?> _primarySchool;
   @override
-  List<String> get primarySchool {
+  List<String?> get primarySchool {
     if (_primarySchool is EqualUnmodifiableListView) return _primarySchool;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_primarySchool);
@@ -156,13 +156,13 @@ class _$_ChildCareModel implements _ChildCareModel {
 
 abstract class _ChildCareModel implements ChildCareModel {
   const factory _ChildCareModel(
-      {required final List<String> preschool,
-      required final List<String> primarySchool}) = _$_ChildCareModel;
+      {required final List<String?> preschool,
+      required final List<String?> primarySchool}) = _$_ChildCareModel;
 
   @override
-  List<String> get preschool;
+  List<String?> get preschool;
   @override
-  List<String> get primarySchool;
+  List<String?> get primarySchool;
   @override
   @JsonKey(ignore: true)
   _$$_ChildCareModelCopyWith<_$_ChildCareModel> get copyWith =>

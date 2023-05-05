@@ -16,8 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$EstimatedCostsModel {
-  List<String>? get singlePerson => throw _privateConstructorUsedError;
   List<String>? get fourPersons => throw _privateConstructorUsedError;
+  List<String>? get singlePerson => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $EstimatedCostsModelCopyWith<EstimatedCostsModel> get copyWith =>
@@ -30,7 +30,7 @@ abstract class $EstimatedCostsModelCopyWith<$Res> {
           EstimatedCostsModel value, $Res Function(EstimatedCostsModel) then) =
       _$EstimatedCostsModelCopyWithImpl<$Res, EstimatedCostsModel>;
   @useResult
-  $Res call({List<String>? singlePerson, List<String>? fourPersons});
+  $Res call({List<String>? fourPersons, List<String>? singlePerson});
 }
 
 /// @nodoc
@@ -46,17 +46,17 @@ class _$EstimatedCostsModelCopyWithImpl<$Res, $Val extends EstimatedCostsModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? singlePerson = freezed,
     Object? fourPersons = freezed,
+    Object? singlePerson = freezed,
   }) {
     return _then(_value.copyWith(
-      singlePerson: freezed == singlePerson
-          ? _value.singlePerson
-          : singlePerson // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       fourPersons: freezed == fourPersons
           ? _value.fourPersons
           : fourPersons // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      singlePerson: freezed == singlePerson
+          ? _value.singlePerson
+          : singlePerson // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ) as $Val);
   }
@@ -70,7 +70,7 @@ abstract class _$$_EstimatedCostsModelCopyWith<$Res>
       __$$_EstimatedCostsModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<String>? singlePerson, List<String>? fourPersons});
+  $Res call({List<String>? fourPersons, List<String>? singlePerson});
 }
 
 /// @nodoc
@@ -84,17 +84,17 @@ class __$$_EstimatedCostsModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? singlePerson = freezed,
     Object? fourPersons = freezed,
+    Object? singlePerson = freezed,
   }) {
     return _then(_$_EstimatedCostsModel(
-      singlePerson: freezed == singlePerson
-          ? _value._singlePerson
-          : singlePerson // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       fourPersons: freezed == fourPersons
           ? _value._fourPersons
           : fourPersons // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      singlePerson: freezed == singlePerson
+          ? _value._singlePerson
+          : singlePerson // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ));
   }
@@ -104,19 +104,9 @@ class __$$_EstimatedCostsModelCopyWithImpl<$Res>
 
 class _$_EstimatedCostsModel implements _EstimatedCostsModel {
   const _$_EstimatedCostsModel(
-      {final List<String>? singlePerson, final List<String>? fourPersons})
-      : _singlePerson = singlePerson,
-        _fourPersons = fourPersons;
-
-  final List<String>? _singlePerson;
-  @override
-  List<String>? get singlePerson {
-    final value = _singlePerson;
-    if (value == null) return null;
-    if (_singlePerson is EqualUnmodifiableListView) return _singlePerson;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+      {final List<String>? fourPersons, final List<String>? singlePerson})
+      : _fourPersons = fourPersons,
+        _singlePerson = singlePerson;
 
   final List<String>? _fourPersons;
   @override
@@ -128,9 +118,19 @@ class _$_EstimatedCostsModel implements _EstimatedCostsModel {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<String>? _singlePerson;
+  @override
+  List<String>? get singlePerson {
+    final value = _singlePerson;
+    if (value == null) return null;
+    if (_singlePerson is EqualUnmodifiableListView) return _singlePerson;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'EstimatedCostsModel(singlePerson: $singlePerson, fourPersons: $fourPersons)';
+    return 'EstimatedCostsModel(fourPersons: $fourPersons, singlePerson: $singlePerson)';
   }
 
   @override
@@ -139,16 +139,16 @@ class _$_EstimatedCostsModel implements _EstimatedCostsModel {
         (other.runtimeType == runtimeType &&
             other is _$_EstimatedCostsModel &&
             const DeepCollectionEquality()
-                .equals(other._singlePerson, _singlePerson) &&
+                .equals(other._fourPersons, _fourPersons) &&
             const DeepCollectionEquality()
-                .equals(other._fourPersons, _fourPersons));
+                .equals(other._singlePerson, _singlePerson));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_singlePerson),
-      const DeepCollectionEquality().hash(_fourPersons));
+      const DeepCollectionEquality().hash(_fourPersons),
+      const DeepCollectionEquality().hash(_singlePerson));
 
   @JsonKey(ignore: true)
   @override
@@ -160,13 +160,13 @@ class _$_EstimatedCostsModel implements _EstimatedCostsModel {
 
 abstract class _EstimatedCostsModel implements EstimatedCostsModel {
   const factory _EstimatedCostsModel(
-      {final List<String>? singlePerson,
-      final List<String>? fourPersons}) = _$_EstimatedCostsModel;
+      {final List<String>? fourPersons,
+      final List<String>? singlePerson}) = _$_EstimatedCostsModel;
 
   @override
-  List<String>? get singlePerson;
-  @override
   List<String>? get fourPersons;
+  @override
+  List<String>? get singlePerson;
   @override
   @JsonKey(ignore: true)
   _$$_EstimatedCostsModelCopyWith<_$_EstimatedCostsModel> get copyWith =>

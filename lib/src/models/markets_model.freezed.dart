@@ -16,25 +16,25 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$MarketsModel {
-  List<String> get milk => throw _privateConstructorUsedError;
-  List<String> get bread => throw _privateConstructorUsedError;
-  List<String> get rice => throw _privateConstructorUsedError;
-  List<String> get eggs => throw _privateConstructorUsedError;
-  List<String> get cheese => throw _privateConstructorUsedError;
-  List<String> get chicken => throw _privateConstructorUsedError;
-  List<String> get beef => throw _privateConstructorUsedError;
-  List<String> get apples => throw _privateConstructorUsedError;
-  List<String> get banana => throw _privateConstructorUsedError;
-  List<String> get oranges => throw _privateConstructorUsedError;
-  List<String> get tomato => throw _privateConstructorUsedError;
-  List<String> get potato => throw _privateConstructorUsedError;
-  List<String> get onion => throw _privateConstructorUsedError;
-  List<String> get lettuce => throw _privateConstructorUsedError;
-  List<String> get water => throw _privateConstructorUsedError;
-  List<String> get wine => throw _privateConstructorUsedError;
-  List<String> get domesticBeer => throw _privateConstructorUsedError;
-  List<String> get importedBeer => throw _privateConstructorUsedError;
-  List<String> get cigarettes => throw _privateConstructorUsedError;
+  List<String?> get milk => throw _privateConstructorUsedError;
+  List<String?> get bread => throw _privateConstructorUsedError;
+  List<String?> get rice => throw _privateConstructorUsedError;
+  List<String?> get eggs => throw _privateConstructorUsedError;
+  List<String?> get cheese => throw _privateConstructorUsedError;
+  List<String?> get chicken => throw _privateConstructorUsedError;
+  List<String?> get beef => throw _privateConstructorUsedError;
+  List<String?> get apples => throw _privateConstructorUsedError;
+  List<String?> get banana => throw _privateConstructorUsedError;
+  List<String?> get oranges => throw _privateConstructorUsedError;
+  List<String?> get tomato => throw _privateConstructorUsedError;
+  List<String?> get potato => throw _privateConstructorUsedError;
+  List<String?> get onion => throw _privateConstructorUsedError;
+  List<String?> get lettuce => throw _privateConstructorUsedError;
+  List<String?> get water => throw _privateConstructorUsedError;
+  List<String?> get wine => throw _privateConstructorUsedError;
+  List<String?> get domesticBeer => throw _privateConstructorUsedError;
+  List<String?> get importedBeer => throw _privateConstructorUsedError;
+  List<String?> get cigarettes => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MarketsModelCopyWith<MarketsModel> get copyWith =>
@@ -48,25 +48,25 @@ abstract class $MarketsModelCopyWith<$Res> {
       _$MarketsModelCopyWithImpl<$Res, MarketsModel>;
   @useResult
   $Res call(
-      {List<String> milk,
-      List<String> bread,
-      List<String> rice,
-      List<String> eggs,
-      List<String> cheese,
-      List<String> chicken,
-      List<String> beef,
-      List<String> apples,
-      List<String> banana,
-      List<String> oranges,
-      List<String> tomato,
-      List<String> potato,
-      List<String> onion,
-      List<String> lettuce,
-      List<String> water,
-      List<String> wine,
-      List<String> domesticBeer,
-      List<String> importedBeer,
-      List<String> cigarettes});
+      {List<String?> milk,
+      List<String?> bread,
+      List<String?> rice,
+      List<String?> eggs,
+      List<String?> cheese,
+      List<String?> chicken,
+      List<String?> beef,
+      List<String?> apples,
+      List<String?> banana,
+      List<String?> oranges,
+      List<String?> tomato,
+      List<String?> potato,
+      List<String?> onion,
+      List<String?> lettuce,
+      List<String?> water,
+      List<String?> wine,
+      List<String?> domesticBeer,
+      List<String?> importedBeer,
+      List<String?> cigarettes});
 }
 
 /// @nodoc
@@ -106,79 +106,79 @@ class _$MarketsModelCopyWithImpl<$Res, $Val extends MarketsModel>
       milk: null == milk
           ? _value.milk
           : milk // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       bread: null == bread
           ? _value.bread
           : bread // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       rice: null == rice
           ? _value.rice
           : rice // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       eggs: null == eggs
           ? _value.eggs
           : eggs // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       cheese: null == cheese
           ? _value.cheese
           : cheese // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       chicken: null == chicken
           ? _value.chicken
           : chicken // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       beef: null == beef
           ? _value.beef
           : beef // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       apples: null == apples
           ? _value.apples
           : apples // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       banana: null == banana
           ? _value.banana
           : banana // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       oranges: null == oranges
           ? _value.oranges
           : oranges // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       tomato: null == tomato
           ? _value.tomato
           : tomato // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       potato: null == potato
           ? _value.potato
           : potato // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       onion: null == onion
           ? _value.onion
           : onion // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       lettuce: null == lettuce
           ? _value.lettuce
           : lettuce // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       water: null == water
           ? _value.water
           : water // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       wine: null == wine
           ? _value.wine
           : wine // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       domesticBeer: null == domesticBeer
           ? _value.domesticBeer
           : domesticBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       importedBeer: null == importedBeer
           ? _value.importedBeer
           : importedBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       cigarettes: null == cigarettes
           ? _value.cigarettes
           : cigarettes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -192,25 +192,25 @@ abstract class _$$_MarketsModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> milk,
-      List<String> bread,
-      List<String> rice,
-      List<String> eggs,
-      List<String> cheese,
-      List<String> chicken,
-      List<String> beef,
-      List<String> apples,
-      List<String> banana,
-      List<String> oranges,
-      List<String> tomato,
-      List<String> potato,
-      List<String> onion,
-      List<String> lettuce,
-      List<String> water,
-      List<String> wine,
-      List<String> domesticBeer,
-      List<String> importedBeer,
-      List<String> cigarettes});
+      {List<String?> milk,
+      List<String?> bread,
+      List<String?> rice,
+      List<String?> eggs,
+      List<String?> cheese,
+      List<String?> chicken,
+      List<String?> beef,
+      List<String?> apples,
+      List<String?> banana,
+      List<String?> oranges,
+      List<String?> tomato,
+      List<String?> potato,
+      List<String?> onion,
+      List<String?> lettuce,
+      List<String?> water,
+      List<String?> wine,
+      List<String?> domesticBeer,
+      List<String?> importedBeer,
+      List<String?> cigarettes});
 }
 
 /// @nodoc
@@ -248,79 +248,79 @@ class __$$_MarketsModelCopyWithImpl<$Res>
       milk: null == milk
           ? _value._milk
           : milk // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       bread: null == bread
           ? _value._bread
           : bread // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       rice: null == rice
           ? _value._rice
           : rice // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       eggs: null == eggs
           ? _value._eggs
           : eggs // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       cheese: null == cheese
           ? _value._cheese
           : cheese // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       chicken: null == chicken
           ? _value._chicken
           : chicken // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       beef: null == beef
           ? _value._beef
           : beef // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       apples: null == apples
           ? _value._apples
           : apples // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       banana: null == banana
           ? _value._banana
           : banana // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       oranges: null == oranges
           ? _value._oranges
           : oranges // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       tomato: null == tomato
           ? _value._tomato
           : tomato // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       potato: null == potato
           ? _value._potato
           : potato // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       onion: null == onion
           ? _value._onion
           : onion // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       lettuce: null == lettuce
           ? _value._lettuce
           : lettuce // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       water: null == water
           ? _value._water
           : water // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       wine: null == wine
           ? _value._wine
           : wine // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       domesticBeer: null == domesticBeer
           ? _value._domesticBeer
           : domesticBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       importedBeer: null == importedBeer
           ? _value._importedBeer
           : importedBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       cigarettes: null == cigarettes
           ? _value._cigarettes
           : cigarettes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -329,25 +329,25 @@ class __$$_MarketsModelCopyWithImpl<$Res>
 
 class _$_MarketsModel implements _MarketsModel {
   const _$_MarketsModel(
-      {required final List<String> milk,
-      required final List<String> bread,
-      required final List<String> rice,
-      required final List<String> eggs,
-      required final List<String> cheese,
-      required final List<String> chicken,
-      required final List<String> beef,
-      required final List<String> apples,
-      required final List<String> banana,
-      required final List<String> oranges,
-      required final List<String> tomato,
-      required final List<String> potato,
-      required final List<String> onion,
-      required final List<String> lettuce,
-      required final List<String> water,
-      required final List<String> wine,
-      required final List<String> domesticBeer,
-      required final List<String> importedBeer,
-      required final List<String> cigarettes})
+      {required final List<String?> milk,
+      required final List<String?> bread,
+      required final List<String?> rice,
+      required final List<String?> eggs,
+      required final List<String?> cheese,
+      required final List<String?> chicken,
+      required final List<String?> beef,
+      required final List<String?> apples,
+      required final List<String?> banana,
+      required final List<String?> oranges,
+      required final List<String?> tomato,
+      required final List<String?> potato,
+      required final List<String?> onion,
+      required final List<String?> lettuce,
+      required final List<String?> water,
+      required final List<String?> wine,
+      required final List<String?> domesticBeer,
+      required final List<String?> importedBeer,
+      required final List<String?> cigarettes})
       : _milk = milk,
         _bread = bread,
         _rice = rice,
@@ -368,153 +368,153 @@ class _$_MarketsModel implements _MarketsModel {
         _importedBeer = importedBeer,
         _cigarettes = cigarettes;
 
-  final List<String> _milk;
+  final List<String?> _milk;
   @override
-  List<String> get milk {
+  List<String?> get milk {
     if (_milk is EqualUnmodifiableListView) return _milk;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_milk);
   }
 
-  final List<String> _bread;
+  final List<String?> _bread;
   @override
-  List<String> get bread {
+  List<String?> get bread {
     if (_bread is EqualUnmodifiableListView) return _bread;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_bread);
   }
 
-  final List<String> _rice;
+  final List<String?> _rice;
   @override
-  List<String> get rice {
+  List<String?> get rice {
     if (_rice is EqualUnmodifiableListView) return _rice;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_rice);
   }
 
-  final List<String> _eggs;
+  final List<String?> _eggs;
   @override
-  List<String> get eggs {
+  List<String?> get eggs {
     if (_eggs is EqualUnmodifiableListView) return _eggs;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_eggs);
   }
 
-  final List<String> _cheese;
+  final List<String?> _cheese;
   @override
-  List<String> get cheese {
+  List<String?> get cheese {
     if (_cheese is EqualUnmodifiableListView) return _cheese;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cheese);
   }
 
-  final List<String> _chicken;
+  final List<String?> _chicken;
   @override
-  List<String> get chicken {
+  List<String?> get chicken {
     if (_chicken is EqualUnmodifiableListView) return _chicken;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_chicken);
   }
 
-  final List<String> _beef;
+  final List<String?> _beef;
   @override
-  List<String> get beef {
+  List<String?> get beef {
     if (_beef is EqualUnmodifiableListView) return _beef;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_beef);
   }
 
-  final List<String> _apples;
+  final List<String?> _apples;
   @override
-  List<String> get apples {
+  List<String?> get apples {
     if (_apples is EqualUnmodifiableListView) return _apples;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_apples);
   }
 
-  final List<String> _banana;
+  final List<String?> _banana;
   @override
-  List<String> get banana {
+  List<String?> get banana {
     if (_banana is EqualUnmodifiableListView) return _banana;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_banana);
   }
 
-  final List<String> _oranges;
+  final List<String?> _oranges;
   @override
-  List<String> get oranges {
+  List<String?> get oranges {
     if (_oranges is EqualUnmodifiableListView) return _oranges;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_oranges);
   }
 
-  final List<String> _tomato;
+  final List<String?> _tomato;
   @override
-  List<String> get tomato {
+  List<String?> get tomato {
     if (_tomato is EqualUnmodifiableListView) return _tomato;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tomato);
   }
 
-  final List<String> _potato;
+  final List<String?> _potato;
   @override
-  List<String> get potato {
+  List<String?> get potato {
     if (_potato is EqualUnmodifiableListView) return _potato;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_potato);
   }
 
-  final List<String> _onion;
+  final List<String?> _onion;
   @override
-  List<String> get onion {
+  List<String?> get onion {
     if (_onion is EqualUnmodifiableListView) return _onion;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_onion);
   }
 
-  final List<String> _lettuce;
+  final List<String?> _lettuce;
   @override
-  List<String> get lettuce {
+  List<String?> get lettuce {
     if (_lettuce is EqualUnmodifiableListView) return _lettuce;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_lettuce);
   }
 
-  final List<String> _water;
+  final List<String?> _water;
   @override
-  List<String> get water {
+  List<String?> get water {
     if (_water is EqualUnmodifiableListView) return _water;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_water);
   }
 
-  final List<String> _wine;
+  final List<String?> _wine;
   @override
-  List<String> get wine {
+  List<String?> get wine {
     if (_wine is EqualUnmodifiableListView) return _wine;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_wine);
   }
 
-  final List<String> _domesticBeer;
+  final List<String?> _domesticBeer;
   @override
-  List<String> get domesticBeer {
+  List<String?> get domesticBeer {
     if (_domesticBeer is EqualUnmodifiableListView) return _domesticBeer;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_domesticBeer);
   }
 
-  final List<String> _importedBeer;
+  final List<String?> _importedBeer;
   @override
-  List<String> get importedBeer {
+  List<String?> get importedBeer {
     if (_importedBeer is EqualUnmodifiableListView) return _importedBeer;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_importedBeer);
   }
 
-  final List<String> _cigarettes;
+  final List<String?> _cigarettes;
   @override
-  List<String> get cigarettes {
+  List<String?> get cigarettes {
     if (_cigarettes is EqualUnmodifiableListView) return _cigarettes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cigarettes);
@@ -587,64 +587,64 @@ class _$_MarketsModel implements _MarketsModel {
 
 abstract class _MarketsModel implements MarketsModel {
   const factory _MarketsModel(
-      {required final List<String> milk,
-      required final List<String> bread,
-      required final List<String> rice,
-      required final List<String> eggs,
-      required final List<String> cheese,
-      required final List<String> chicken,
-      required final List<String> beef,
-      required final List<String> apples,
-      required final List<String> banana,
-      required final List<String> oranges,
-      required final List<String> tomato,
-      required final List<String> potato,
-      required final List<String> onion,
-      required final List<String> lettuce,
-      required final List<String> water,
-      required final List<String> wine,
-      required final List<String> domesticBeer,
-      required final List<String> importedBeer,
-      required final List<String> cigarettes}) = _$_MarketsModel;
+      {required final List<String?> milk,
+      required final List<String?> bread,
+      required final List<String?> rice,
+      required final List<String?> eggs,
+      required final List<String?> cheese,
+      required final List<String?> chicken,
+      required final List<String?> beef,
+      required final List<String?> apples,
+      required final List<String?> banana,
+      required final List<String?> oranges,
+      required final List<String?> tomato,
+      required final List<String?> potato,
+      required final List<String?> onion,
+      required final List<String?> lettuce,
+      required final List<String?> water,
+      required final List<String?> wine,
+      required final List<String?> domesticBeer,
+      required final List<String?> importedBeer,
+      required final List<String?> cigarettes}) = _$_MarketsModel;
 
   @override
-  List<String> get milk;
+  List<String?> get milk;
   @override
-  List<String> get bread;
+  List<String?> get bread;
   @override
-  List<String> get rice;
+  List<String?> get rice;
   @override
-  List<String> get eggs;
+  List<String?> get eggs;
   @override
-  List<String> get cheese;
+  List<String?> get cheese;
   @override
-  List<String> get chicken;
+  List<String?> get chicken;
   @override
-  List<String> get beef;
+  List<String?> get beef;
   @override
-  List<String> get apples;
+  List<String?> get apples;
   @override
-  List<String> get banana;
+  List<String?> get banana;
   @override
-  List<String> get oranges;
+  List<String?> get oranges;
   @override
-  List<String> get tomato;
+  List<String?> get tomato;
   @override
-  List<String> get potato;
+  List<String?> get potato;
   @override
-  List<String> get onion;
+  List<String?> get onion;
   @override
-  List<String> get lettuce;
+  List<String?> get lettuce;
   @override
-  List<String> get water;
+  List<String?> get water;
   @override
-  List<String> get wine;
+  List<String?> get wine;
   @override
-  List<String> get domesticBeer;
+  List<String?> get domesticBeer;
   @override
-  List<String> get importedBeer;
+  List<String?> get importedBeer;
   @override
-  List<String> get cigarettes;
+  List<String?> get cigarettes;
   @override
   @JsonKey(ignore: true)
   _$$_MarketsModelCopyWith<_$_MarketsModel> get copyWith =>

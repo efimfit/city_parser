@@ -16,14 +16,14 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RestaurantsModel {
-  List<String> get inexpensiveMeal => throw _privateConstructorUsedError;
-  List<String> get mealForTwoPeople => throw _privateConstructorUsedError;
-  List<String> get mcDonalds => throw _privateConstructorUsedError;
-  List<String> get domesticBeer => throw _privateConstructorUsedError;
-  List<String> get importedBeer => throw _privateConstructorUsedError;
-  List<String> get cappuccino => throw _privateConstructorUsedError;
-  List<String> get pepsi => throw _privateConstructorUsedError;
-  List<String> get water => throw _privateConstructorUsedError;
+  List<String?> get inexpensiveMeal => throw _privateConstructorUsedError;
+  List<String?> get mealForTwoPeople => throw _privateConstructorUsedError;
+  List<String?> get mcDonalds => throw _privateConstructorUsedError;
+  List<String?> get domesticBeer => throw _privateConstructorUsedError;
+  List<String?> get importedBeer => throw _privateConstructorUsedError;
+  List<String?> get cappuccino => throw _privateConstructorUsedError;
+  List<String?> get pepsi => throw _privateConstructorUsedError;
+  List<String?> get water => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $RestaurantsModelCopyWith<RestaurantsModel> get copyWith =>
@@ -37,14 +37,14 @@ abstract class $RestaurantsModelCopyWith<$Res> {
       _$RestaurantsModelCopyWithImpl<$Res, RestaurantsModel>;
   @useResult
   $Res call(
-      {List<String> inexpensiveMeal,
-      List<String> mealForTwoPeople,
-      List<String> mcDonalds,
-      List<String> domesticBeer,
-      List<String> importedBeer,
-      List<String> cappuccino,
-      List<String> pepsi,
-      List<String> water});
+      {List<String?> inexpensiveMeal,
+      List<String?> mealForTwoPeople,
+      List<String?> mcDonalds,
+      List<String?> domesticBeer,
+      List<String?> importedBeer,
+      List<String?> cappuccino,
+      List<String?> pepsi,
+      List<String?> water});
 }
 
 /// @nodoc
@@ -73,35 +73,35 @@ class _$RestaurantsModelCopyWithImpl<$Res, $Val extends RestaurantsModel>
       inexpensiveMeal: null == inexpensiveMeal
           ? _value.inexpensiveMeal
           : inexpensiveMeal // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mealForTwoPeople: null == mealForTwoPeople
           ? _value.mealForTwoPeople
           : mealForTwoPeople // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mcDonalds: null == mcDonalds
           ? _value.mcDonalds
           : mcDonalds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       domesticBeer: null == domesticBeer
           ? _value.domesticBeer
           : domesticBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       importedBeer: null == importedBeer
           ? _value.importedBeer
           : importedBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       cappuccino: null == cappuccino
           ? _value.cappuccino
           : cappuccino // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       pepsi: null == pepsi
           ? _value.pepsi
           : pepsi // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       water: null == water
           ? _value.water
           : water // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -115,14 +115,14 @@ abstract class _$$_RestaurantsModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> inexpensiveMeal,
-      List<String> mealForTwoPeople,
-      List<String> mcDonalds,
-      List<String> domesticBeer,
-      List<String> importedBeer,
-      List<String> cappuccino,
-      List<String> pepsi,
-      List<String> water});
+      {List<String?> inexpensiveMeal,
+      List<String?> mealForTwoPeople,
+      List<String?> mcDonalds,
+      List<String?> domesticBeer,
+      List<String?> importedBeer,
+      List<String?> cappuccino,
+      List<String?> pepsi,
+      List<String?> water});
 }
 
 /// @nodoc
@@ -149,35 +149,35 @@ class __$$_RestaurantsModelCopyWithImpl<$Res>
       inexpensiveMeal: null == inexpensiveMeal
           ? _value._inexpensiveMeal
           : inexpensiveMeal // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mealForTwoPeople: null == mealForTwoPeople
           ? _value._mealForTwoPeople
           : mealForTwoPeople // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mcDonalds: null == mcDonalds
           ? _value._mcDonalds
           : mcDonalds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       domesticBeer: null == domesticBeer
           ? _value._domesticBeer
           : domesticBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       importedBeer: null == importedBeer
           ? _value._importedBeer
           : importedBeer // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       cappuccino: null == cappuccino
           ? _value._cappuccino
           : cappuccino // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       pepsi: null == pepsi
           ? _value._pepsi
           : pepsi // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       water: null == water
           ? _value._water
           : water // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -186,14 +186,14 @@ class __$$_RestaurantsModelCopyWithImpl<$Res>
 
 class _$_RestaurantsModel implements _RestaurantsModel {
   const _$_RestaurantsModel(
-      {required final List<String> inexpensiveMeal,
-      required final List<String> mealForTwoPeople,
-      required final List<String> mcDonalds,
-      required final List<String> domesticBeer,
-      required final List<String> importedBeer,
-      required final List<String> cappuccino,
-      required final List<String> pepsi,
-      required final List<String> water})
+      {required final List<String?> inexpensiveMeal,
+      required final List<String?> mealForTwoPeople,
+      required final List<String?> mcDonalds,
+      required final List<String?> domesticBeer,
+      required final List<String?> importedBeer,
+      required final List<String?> cappuccino,
+      required final List<String?> pepsi,
+      required final List<String?> water})
       : _inexpensiveMeal = inexpensiveMeal,
         _mealForTwoPeople = mealForTwoPeople,
         _mcDonalds = mcDonalds,
@@ -203,66 +203,66 @@ class _$_RestaurantsModel implements _RestaurantsModel {
         _pepsi = pepsi,
         _water = water;
 
-  final List<String> _inexpensiveMeal;
+  final List<String?> _inexpensiveMeal;
   @override
-  List<String> get inexpensiveMeal {
+  List<String?> get inexpensiveMeal {
     if (_inexpensiveMeal is EqualUnmodifiableListView) return _inexpensiveMeal;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_inexpensiveMeal);
   }
 
-  final List<String> _mealForTwoPeople;
+  final List<String?> _mealForTwoPeople;
   @override
-  List<String> get mealForTwoPeople {
+  List<String?> get mealForTwoPeople {
     if (_mealForTwoPeople is EqualUnmodifiableListView)
       return _mealForTwoPeople;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_mealForTwoPeople);
   }
 
-  final List<String> _mcDonalds;
+  final List<String?> _mcDonalds;
   @override
-  List<String> get mcDonalds {
+  List<String?> get mcDonalds {
     if (_mcDonalds is EqualUnmodifiableListView) return _mcDonalds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_mcDonalds);
   }
 
-  final List<String> _domesticBeer;
+  final List<String?> _domesticBeer;
   @override
-  List<String> get domesticBeer {
+  List<String?> get domesticBeer {
     if (_domesticBeer is EqualUnmodifiableListView) return _domesticBeer;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_domesticBeer);
   }
 
-  final List<String> _importedBeer;
+  final List<String?> _importedBeer;
   @override
-  List<String> get importedBeer {
+  List<String?> get importedBeer {
     if (_importedBeer is EqualUnmodifiableListView) return _importedBeer;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_importedBeer);
   }
 
-  final List<String> _cappuccino;
+  final List<String?> _cappuccino;
   @override
-  List<String> get cappuccino {
+  List<String?> get cappuccino {
     if (_cappuccino is EqualUnmodifiableListView) return _cappuccino;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cappuccino);
   }
 
-  final List<String> _pepsi;
+  final List<String?> _pepsi;
   @override
-  List<String> get pepsi {
+  List<String?> get pepsi {
     if (_pepsi is EqualUnmodifiableListView) return _pepsi;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_pepsi);
   }
 
-  final List<String> _water;
+  final List<String?> _water;
   @override
-  List<String> get water {
+  List<String?> get water {
     if (_water is EqualUnmodifiableListView) return _water;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_water);
@@ -315,31 +315,31 @@ class _$_RestaurantsModel implements _RestaurantsModel {
 
 abstract class _RestaurantsModel implements RestaurantsModel {
   const factory _RestaurantsModel(
-      {required final List<String> inexpensiveMeal,
-      required final List<String> mealForTwoPeople,
-      required final List<String> mcDonalds,
-      required final List<String> domesticBeer,
-      required final List<String> importedBeer,
-      required final List<String> cappuccino,
-      required final List<String> pepsi,
-      required final List<String> water}) = _$_RestaurantsModel;
+      {required final List<String?> inexpensiveMeal,
+      required final List<String?> mealForTwoPeople,
+      required final List<String?> mcDonalds,
+      required final List<String?> domesticBeer,
+      required final List<String?> importedBeer,
+      required final List<String?> cappuccino,
+      required final List<String?> pepsi,
+      required final List<String?> water}) = _$_RestaurantsModel;
 
   @override
-  List<String> get inexpensiveMeal;
+  List<String?> get inexpensiveMeal;
   @override
-  List<String> get mealForTwoPeople;
+  List<String?> get mealForTwoPeople;
   @override
-  List<String> get mcDonalds;
+  List<String?> get mcDonalds;
   @override
-  List<String> get domesticBeer;
+  List<String?> get domesticBeer;
   @override
-  List<String> get importedBeer;
+  List<String?> get importedBeer;
   @override
-  List<String> get cappuccino;
+  List<String?> get cappuccino;
   @override
-  List<String> get pepsi;
+  List<String?> get pepsi;
   @override
-  List<String> get water;
+  List<String?> get water;
   @override
   @JsonKey(ignore: true)
   _$$_RestaurantsModelCopyWith<_$_RestaurantsModel> get copyWith =>

@@ -16,9 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$UtilitiesModel {
-  List<String> get basic => throw _privateConstructorUsedError;
-  List<String> get mobile => throw _privateConstructorUsedError;
-  List<String> get internet => throw _privateConstructorUsedError;
+  List<String?> get basic => throw _privateConstructorUsedError;
+  List<String?> get mobile => throw _privateConstructorUsedError;
+  List<String?> get internet => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UtilitiesModelCopyWith<UtilitiesModel> get copyWith =>
@@ -31,7 +31,8 @@ abstract class $UtilitiesModelCopyWith<$Res> {
           UtilitiesModel value, $Res Function(UtilitiesModel) then) =
       _$UtilitiesModelCopyWithImpl<$Res, UtilitiesModel>;
   @useResult
-  $Res call({List<String> basic, List<String> mobile, List<String> internet});
+  $Res call(
+      {List<String?> basic, List<String?> mobile, List<String?> internet});
 }
 
 /// @nodoc
@@ -55,15 +56,15 @@ class _$UtilitiesModelCopyWithImpl<$Res, $Val extends UtilitiesModel>
       basic: null == basic
           ? _value.basic
           : basic // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mobile: null == mobile
           ? _value.mobile
           : mobile // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       internet: null == internet
           ? _value.internet
           : internet // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -76,7 +77,8 @@ abstract class _$$_UtilitiesModelCopyWith<$Res>
       __$$_UtilitiesModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<String> basic, List<String> mobile, List<String> internet});
+  $Res call(
+      {List<String?> basic, List<String?> mobile, List<String?> internet});
 }
 
 /// @nodoc
@@ -98,15 +100,15 @@ class __$$_UtilitiesModelCopyWithImpl<$Res>
       basic: null == basic
           ? _value._basic
           : basic // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mobile: null == mobile
           ? _value._mobile
           : mobile // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       internet: null == internet
           ? _value._internet
           : internet // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -115,32 +117,32 @@ class __$$_UtilitiesModelCopyWithImpl<$Res>
 
 class _$_UtilitiesModel implements _UtilitiesModel {
   const _$_UtilitiesModel(
-      {required final List<String> basic,
-      required final List<String> mobile,
-      required final List<String> internet})
+      {required final List<String?> basic,
+      required final List<String?> mobile,
+      required final List<String?> internet})
       : _basic = basic,
         _mobile = mobile,
         _internet = internet;
 
-  final List<String> _basic;
+  final List<String?> _basic;
   @override
-  List<String> get basic {
+  List<String?> get basic {
     if (_basic is EqualUnmodifiableListView) return _basic;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_basic);
   }
 
-  final List<String> _mobile;
+  final List<String?> _mobile;
   @override
-  List<String> get mobile {
+  List<String?> get mobile {
     if (_mobile is EqualUnmodifiableListView) return _mobile;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_mobile);
   }
 
-  final List<String> _internet;
+  final List<String?> _internet;
   @override
-  List<String> get internet {
+  List<String?> get internet {
     if (_internet is EqualUnmodifiableListView) return _internet;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_internet);
@@ -177,16 +179,16 @@ class _$_UtilitiesModel implements _UtilitiesModel {
 
 abstract class _UtilitiesModel implements UtilitiesModel {
   const factory _UtilitiesModel(
-      {required final List<String> basic,
-      required final List<String> mobile,
-      required final List<String> internet}) = _$_UtilitiesModel;
+      {required final List<String?> basic,
+      required final List<String?> mobile,
+      required final List<String?> internet}) = _$_UtilitiesModel;
 
   @override
-  List<String> get basic;
+  List<String?> get basic;
   @override
-  List<String> get mobile;
+  List<String?> get mobile;
   @override
-  List<String> get internet;
+  List<String?> get internet;
   @override
   @JsonKey(ignore: true)
   _$$_UtilitiesModelCopyWith<_$_UtilitiesModel> get copyWith =>

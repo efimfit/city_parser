@@ -16,8 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SalariesModel {
-  List<String> get salary => throw _privateConstructorUsedError;
-  List<String> get mortgage => throw _privateConstructorUsedError;
+  List<String?> get salary => throw _privateConstructorUsedError;
+  List<String?> get mortgage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SalariesModelCopyWith<SalariesModel> get copyWith =>
@@ -30,7 +30,7 @@ abstract class $SalariesModelCopyWith<$Res> {
           SalariesModel value, $Res Function(SalariesModel) then) =
       _$SalariesModelCopyWithImpl<$Res, SalariesModel>;
   @useResult
-  $Res call({List<String> salary, List<String> mortgage});
+  $Res call({List<String?> salary, List<String?> mortgage});
 }
 
 /// @nodoc
@@ -53,11 +53,11 @@ class _$SalariesModelCopyWithImpl<$Res, $Val extends SalariesModel>
       salary: null == salary
           ? _value.salary
           : salary // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mortgage: null == mortgage
           ? _value.mortgage
           : mortgage // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -70,7 +70,7 @@ abstract class _$$_SalariesModelCopyWith<$Res>
       __$$_SalariesModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<String> salary, List<String> mortgage});
+  $Res call({List<String?> salary, List<String?> mortgage});
 }
 
 /// @nodoc
@@ -91,11 +91,11 @@ class __$$_SalariesModelCopyWithImpl<$Res>
       salary: null == salary
           ? _value._salary
           : salary // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       mortgage: null == mortgage
           ? _value._mortgage
           : mortgage // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -104,22 +104,22 @@ class __$$_SalariesModelCopyWithImpl<$Res>
 
 class _$_SalariesModel implements _SalariesModel {
   const _$_SalariesModel(
-      {required final List<String> salary,
-      required final List<String> mortgage})
+      {required final List<String?> salary,
+      required final List<String?> mortgage})
       : _salary = salary,
         _mortgage = mortgage;
 
-  final List<String> _salary;
+  final List<String?> _salary;
   @override
-  List<String> get salary {
+  List<String?> get salary {
     if (_salary is EqualUnmodifiableListView) return _salary;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_salary);
   }
 
-  final List<String> _mortgage;
+  final List<String?> _mortgage;
   @override
-  List<String> get mortgage {
+  List<String?> get mortgage {
     if (_mortgage is EqualUnmodifiableListView) return _mortgage;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_mortgage);
@@ -154,13 +154,13 @@ class _$_SalariesModel implements _SalariesModel {
 
 abstract class _SalariesModel implements SalariesModel {
   const factory _SalariesModel(
-      {required final List<String> salary,
-      required final List<String> mortgage}) = _$_SalariesModel;
+      {required final List<String?> salary,
+      required final List<String?> mortgage}) = _$_SalariesModel;
 
   @override
-  List<String> get salary;
+  List<String?> get salary;
   @override
-  List<String> get mortgage;
+  List<String?> get mortgage;
   @override
   @JsonKey(ignore: true)
   _$$_SalariesModelCopyWith<_$_SalariesModel> get copyWith =>

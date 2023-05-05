@@ -16,10 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RentModel {
-  List<String> get oneBedroomCenter => throw _privateConstructorUsedError;
-  List<String> get oneBedroomOutside => throw _privateConstructorUsedError;
-  List<String> get threeBedroomsCenter => throw _privateConstructorUsedError;
-  List<String> get threeBedroomsOutside => throw _privateConstructorUsedError;
+  List<String?> get oneBedroomCenter => throw _privateConstructorUsedError;
+  List<String?> get oneBedroomOutside => throw _privateConstructorUsedError;
+  List<String?> get threeBedroomsCenter => throw _privateConstructorUsedError;
+  List<String?> get threeBedroomsOutside => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $RentModelCopyWith<RentModel> get copyWith =>
@@ -32,10 +32,10 @@ abstract class $RentModelCopyWith<$Res> {
       _$RentModelCopyWithImpl<$Res, RentModel>;
   @useResult
   $Res call(
-      {List<String> oneBedroomCenter,
-      List<String> oneBedroomOutside,
-      List<String> threeBedroomsCenter,
-      List<String> threeBedroomsOutside});
+      {List<String?> oneBedroomCenter,
+      List<String?> oneBedroomOutside,
+      List<String?> threeBedroomsCenter,
+      List<String?> threeBedroomsOutside});
 }
 
 /// @nodoc
@@ -60,19 +60,19 @@ class _$RentModelCopyWithImpl<$Res, $Val extends RentModel>
       oneBedroomCenter: null == oneBedroomCenter
           ? _value.oneBedroomCenter
           : oneBedroomCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       oneBedroomOutside: null == oneBedroomOutside
           ? _value.oneBedroomOutside
           : oneBedroomOutside // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       threeBedroomsCenter: null == threeBedroomsCenter
           ? _value.threeBedroomsCenter
           : threeBedroomsCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       threeBedroomsOutside: null == threeBedroomsOutside
           ? _value.threeBedroomsOutside
           : threeBedroomsOutside // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -85,10 +85,10 @@ abstract class _$$_RentModelCopyWith<$Res> implements $RentModelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {List<String> oneBedroomCenter,
-      List<String> oneBedroomOutside,
-      List<String> threeBedroomsCenter,
-      List<String> threeBedroomsOutside});
+      {List<String?> oneBedroomCenter,
+      List<String?> oneBedroomOutside,
+      List<String?> threeBedroomsCenter,
+      List<String?> threeBedroomsOutside});
 }
 
 /// @nodoc
@@ -111,19 +111,19 @@ class __$$_RentModelCopyWithImpl<$Res>
       oneBedroomCenter: null == oneBedroomCenter
           ? _value._oneBedroomCenter
           : oneBedroomCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       oneBedroomOutside: null == oneBedroomOutside
           ? _value._oneBedroomOutside
           : oneBedroomOutside // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       threeBedroomsCenter: null == threeBedroomsCenter
           ? _value._threeBedroomsCenter
           : threeBedroomsCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       threeBedroomsOutside: null == threeBedroomsOutside
           ? _value._threeBedroomsOutside
           : threeBedroomsOutside // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -132,45 +132,45 @@ class __$$_RentModelCopyWithImpl<$Res>
 
 class _$_RentModel implements _RentModel {
   const _$_RentModel(
-      {required final List<String> oneBedroomCenter,
-      required final List<String> oneBedroomOutside,
-      required final List<String> threeBedroomsCenter,
-      required final List<String> threeBedroomsOutside})
+      {required final List<String?> oneBedroomCenter,
+      required final List<String?> oneBedroomOutside,
+      required final List<String?> threeBedroomsCenter,
+      required final List<String?> threeBedroomsOutside})
       : _oneBedroomCenter = oneBedroomCenter,
         _oneBedroomOutside = oneBedroomOutside,
         _threeBedroomsCenter = threeBedroomsCenter,
         _threeBedroomsOutside = threeBedroomsOutside;
 
-  final List<String> _oneBedroomCenter;
+  final List<String?> _oneBedroomCenter;
   @override
-  List<String> get oneBedroomCenter {
+  List<String?> get oneBedroomCenter {
     if (_oneBedroomCenter is EqualUnmodifiableListView)
       return _oneBedroomCenter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_oneBedroomCenter);
   }
 
-  final List<String> _oneBedroomOutside;
+  final List<String?> _oneBedroomOutside;
   @override
-  List<String> get oneBedroomOutside {
+  List<String?> get oneBedroomOutside {
     if (_oneBedroomOutside is EqualUnmodifiableListView)
       return _oneBedroomOutside;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_oneBedroomOutside);
   }
 
-  final List<String> _threeBedroomsCenter;
+  final List<String?> _threeBedroomsCenter;
   @override
-  List<String> get threeBedroomsCenter {
+  List<String?> get threeBedroomsCenter {
     if (_threeBedroomsCenter is EqualUnmodifiableListView)
       return _threeBedroomsCenter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_threeBedroomsCenter);
   }
 
-  final List<String> _threeBedroomsOutside;
+  final List<String?> _threeBedroomsOutside;
   @override
-  List<String> get threeBedroomsOutside {
+  List<String?> get threeBedroomsOutside {
     if (_threeBedroomsOutside is EqualUnmodifiableListView)
       return _threeBedroomsOutside;
     // ignore: implicit_dynamic_type
@@ -214,19 +214,19 @@ class _$_RentModel implements _RentModel {
 
 abstract class _RentModel implements RentModel {
   const factory _RentModel(
-      {required final List<String> oneBedroomCenter,
-      required final List<String> oneBedroomOutside,
-      required final List<String> threeBedroomsCenter,
-      required final List<String> threeBedroomsOutside}) = _$_RentModel;
+      {required final List<String?> oneBedroomCenter,
+      required final List<String?> oneBedroomOutside,
+      required final List<String?> threeBedroomsCenter,
+      required final List<String?> threeBedroomsOutside}) = _$_RentModel;
 
   @override
-  List<String> get oneBedroomCenter;
+  List<String?> get oneBedroomCenter;
   @override
-  List<String> get oneBedroomOutside;
+  List<String?> get oneBedroomOutside;
   @override
-  List<String> get threeBedroomsCenter;
+  List<String?> get threeBedroomsCenter;
   @override
-  List<String> get threeBedroomsOutside;
+  List<String?> get threeBedroomsOutside;
   @override
   @JsonKey(ignore: true)
   _$$_RentModelCopyWith<_$_RentModel> get copyWith =>

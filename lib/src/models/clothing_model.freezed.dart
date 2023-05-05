@@ -16,10 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ClothingModel {
-  List<String> get jeans => throw _privateConstructorUsedError;
-  List<String> get dress => throw _privateConstructorUsedError;
-  List<String> get nike => throw _privateConstructorUsedError;
-  List<String> get shoes => throw _privateConstructorUsedError;
+  List<String?> get jeans => throw _privateConstructorUsedError;
+  List<String?> get dress => throw _privateConstructorUsedError;
+  List<String?> get nike => throw _privateConstructorUsedError;
+  List<String?> get shoes => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ClothingModelCopyWith<ClothingModel> get copyWith =>
@@ -33,10 +33,10 @@ abstract class $ClothingModelCopyWith<$Res> {
       _$ClothingModelCopyWithImpl<$Res, ClothingModel>;
   @useResult
   $Res call(
-      {List<String> jeans,
-      List<String> dress,
-      List<String> nike,
-      List<String> shoes});
+      {List<String?> jeans,
+      List<String?> dress,
+      List<String?> nike,
+      List<String?> shoes});
 }
 
 /// @nodoc
@@ -61,19 +61,19 @@ class _$ClothingModelCopyWithImpl<$Res, $Val extends ClothingModel>
       jeans: null == jeans
           ? _value.jeans
           : jeans // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       dress: null == dress
           ? _value.dress
           : dress // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       nike: null == nike
           ? _value.nike
           : nike // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       shoes: null == shoes
           ? _value.shoes
           : shoes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -87,10 +87,10 @@ abstract class _$$_ClothingModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> jeans,
-      List<String> dress,
-      List<String> nike,
-      List<String> shoes});
+      {List<String?> jeans,
+      List<String?> dress,
+      List<String?> nike,
+      List<String?> shoes});
 }
 
 /// @nodoc
@@ -113,19 +113,19 @@ class __$$_ClothingModelCopyWithImpl<$Res>
       jeans: null == jeans
           ? _value._jeans
           : jeans // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       dress: null == dress
           ? _value._dress
           : dress // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       nike: null == nike
           ? _value._nike
           : nike // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       shoes: null == shoes
           ? _value._shoes
           : shoes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -134,42 +134,42 @@ class __$$_ClothingModelCopyWithImpl<$Res>
 
 class _$_ClothingModel implements _ClothingModel {
   const _$_ClothingModel(
-      {required final List<String> jeans,
-      required final List<String> dress,
-      required final List<String> nike,
-      required final List<String> shoes})
+      {required final List<String?> jeans,
+      required final List<String?> dress,
+      required final List<String?> nike,
+      required final List<String?> shoes})
       : _jeans = jeans,
         _dress = dress,
         _nike = nike,
         _shoes = shoes;
 
-  final List<String> _jeans;
+  final List<String?> _jeans;
   @override
-  List<String> get jeans {
+  List<String?> get jeans {
     if (_jeans is EqualUnmodifiableListView) return _jeans;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_jeans);
   }
 
-  final List<String> _dress;
+  final List<String?> _dress;
   @override
-  List<String> get dress {
+  List<String?> get dress {
     if (_dress is EqualUnmodifiableListView) return _dress;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_dress);
   }
 
-  final List<String> _nike;
+  final List<String?> _nike;
   @override
-  List<String> get nike {
+  List<String?> get nike {
     if (_nike is EqualUnmodifiableListView) return _nike;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_nike);
   }
 
-  final List<String> _shoes;
+  final List<String?> _shoes;
   @override
-  List<String> get shoes {
+  List<String?> get shoes {
     if (_shoes is EqualUnmodifiableListView) return _shoes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_shoes);
@@ -208,19 +208,19 @@ class _$_ClothingModel implements _ClothingModel {
 
 abstract class _ClothingModel implements ClothingModel {
   const factory _ClothingModel(
-      {required final List<String> jeans,
-      required final List<String> dress,
-      required final List<String> nike,
-      required final List<String> shoes}) = _$_ClothingModel;
+      {required final List<String?> jeans,
+      required final List<String?> dress,
+      required final List<String?> nike,
+      required final List<String?> shoes}) = _$_ClothingModel;
 
   @override
-  List<String> get jeans;
+  List<String?> get jeans;
   @override
-  List<String> get dress;
+  List<String?> get dress;
   @override
-  List<String> get nike;
+  List<String?> get nike;
   @override
-  List<String> get shoes;
+  List<String?> get shoes;
   @override
   @JsonKey(ignore: true)
   _$$_ClothingModelCopyWith<_$_ClothingModel> get copyWith =>

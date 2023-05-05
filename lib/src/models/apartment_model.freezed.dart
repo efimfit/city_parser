@@ -16,8 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ApartmentModel {
-  List<String> get cityCenter => throw _privateConstructorUsedError;
-  List<String> get outsideCenter => throw _privateConstructorUsedError;
+  List<String?> get cityCenter => throw _privateConstructorUsedError;
+  List<String?> get outsideCenter => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ApartmentModelCopyWith<ApartmentModel> get copyWith =>
@@ -30,7 +30,7 @@ abstract class $ApartmentModelCopyWith<$Res> {
           ApartmentModel value, $Res Function(ApartmentModel) then) =
       _$ApartmentModelCopyWithImpl<$Res, ApartmentModel>;
   @useResult
-  $Res call({List<String> cityCenter, List<String> outsideCenter});
+  $Res call({List<String?> cityCenter, List<String?> outsideCenter});
 }
 
 /// @nodoc
@@ -53,11 +53,11 @@ class _$ApartmentModelCopyWithImpl<$Res, $Val extends ApartmentModel>
       cityCenter: null == cityCenter
           ? _value.cityCenter
           : cityCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       outsideCenter: null == outsideCenter
           ? _value.outsideCenter
           : outsideCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -70,7 +70,7 @@ abstract class _$$_ApartmentModelCopyWith<$Res>
       __$$_ApartmentModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<String> cityCenter, List<String> outsideCenter});
+  $Res call({List<String?> cityCenter, List<String?> outsideCenter});
 }
 
 /// @nodoc
@@ -91,11 +91,11 @@ class __$$_ApartmentModelCopyWithImpl<$Res>
       cityCenter: null == cityCenter
           ? _value._cityCenter
           : cityCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       outsideCenter: null == outsideCenter
           ? _value._outsideCenter
           : outsideCenter // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -104,22 +104,22 @@ class __$$_ApartmentModelCopyWithImpl<$Res>
 
 class _$_ApartmentModel implements _ApartmentModel {
   const _$_ApartmentModel(
-      {required final List<String> cityCenter,
-      required final List<String> outsideCenter})
+      {required final List<String?> cityCenter,
+      required final List<String?> outsideCenter})
       : _cityCenter = cityCenter,
         _outsideCenter = outsideCenter;
 
-  final List<String> _cityCenter;
+  final List<String?> _cityCenter;
   @override
-  List<String> get cityCenter {
+  List<String?> get cityCenter {
     if (_cityCenter is EqualUnmodifiableListView) return _cityCenter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cityCenter);
   }
 
-  final List<String> _outsideCenter;
+  final List<String?> _outsideCenter;
   @override
-  List<String> get outsideCenter {
+  List<String?> get outsideCenter {
     if (_outsideCenter is EqualUnmodifiableListView) return _outsideCenter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_outsideCenter);
@@ -156,13 +156,13 @@ class _$_ApartmentModel implements _ApartmentModel {
 
 abstract class _ApartmentModel implements ApartmentModel {
   const factory _ApartmentModel(
-      {required final List<String> cityCenter,
-      required final List<String> outsideCenter}) = _$_ApartmentModel;
+      {required final List<String?> cityCenter,
+      required final List<String?> outsideCenter}) = _$_ApartmentModel;
 
   @override
-  List<String> get cityCenter;
+  List<String?> get cityCenter;
   @override
-  List<String> get outsideCenter;
+  List<String?> get outsideCenter;
   @override
   @JsonKey(ignore: true)
   _$$_ApartmentModelCopyWith<_$_ApartmentModel> get copyWith =>

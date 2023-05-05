@@ -16,13 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$TransportationModel {
-  List<String> get ticket => throw _privateConstructorUsedError;
-  List<String> get pass => throw _privateConstructorUsedError;
-  List<String> get taxiStart => throw _privateConstructorUsedError;
-  List<String> get taxiOneKm => throw _privateConstructorUsedError;
-  List<String> get gasoline => throw _privateConstructorUsedError;
-  List<String> get volkswagenGolf => throw _privateConstructorUsedError;
-  List<String> get toyotaCorolla => throw _privateConstructorUsedError;
+  List<String?> get ticket => throw _privateConstructorUsedError;
+  List<String?> get pass => throw _privateConstructorUsedError;
+  List<String?> get taxiStart => throw _privateConstructorUsedError;
+  List<String?> get taxiOneKm => throw _privateConstructorUsedError;
+  List<String?> get gasoline => throw _privateConstructorUsedError;
+  List<String?> get volkswagenGolf => throw _privateConstructorUsedError;
+  List<String?> get toyotaCorolla => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TransportationModelCopyWith<TransportationModel> get copyWith =>
@@ -36,13 +36,13 @@ abstract class $TransportationModelCopyWith<$Res> {
       _$TransportationModelCopyWithImpl<$Res, TransportationModel>;
   @useResult
   $Res call(
-      {List<String> ticket,
-      List<String> pass,
-      List<String> taxiStart,
-      List<String> taxiOneKm,
-      List<String> gasoline,
-      List<String> volkswagenGolf,
-      List<String> toyotaCorolla});
+      {List<String?> ticket,
+      List<String?> pass,
+      List<String?> taxiStart,
+      List<String?> taxiOneKm,
+      List<String?> gasoline,
+      List<String?> volkswagenGolf,
+      List<String?> toyotaCorolla});
 }
 
 /// @nodoc
@@ -70,31 +70,31 @@ class _$TransportationModelCopyWithImpl<$Res, $Val extends TransportationModel>
       ticket: null == ticket
           ? _value.ticket
           : ticket // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       pass: null == pass
           ? _value.pass
           : pass // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       taxiStart: null == taxiStart
           ? _value.taxiStart
           : taxiStart // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       taxiOneKm: null == taxiOneKm
           ? _value.taxiOneKm
           : taxiOneKm // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       gasoline: null == gasoline
           ? _value.gasoline
           : gasoline // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       volkswagenGolf: null == volkswagenGolf
           ? _value.volkswagenGolf
           : volkswagenGolf // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       toyotaCorolla: null == toyotaCorolla
           ? _value.toyotaCorolla
           : toyotaCorolla // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ) as $Val);
   }
 }
@@ -108,13 +108,13 @@ abstract class _$$_TransportationModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> ticket,
-      List<String> pass,
-      List<String> taxiStart,
-      List<String> taxiOneKm,
-      List<String> gasoline,
-      List<String> volkswagenGolf,
-      List<String> toyotaCorolla});
+      {List<String?> ticket,
+      List<String?> pass,
+      List<String?> taxiStart,
+      List<String?> taxiOneKm,
+      List<String?> gasoline,
+      List<String?> volkswagenGolf,
+      List<String?> toyotaCorolla});
 }
 
 /// @nodoc
@@ -140,31 +140,31 @@ class __$$_TransportationModelCopyWithImpl<$Res>
       ticket: null == ticket
           ? _value._ticket
           : ticket // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       pass: null == pass
           ? _value._pass
           : pass // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       taxiStart: null == taxiStart
           ? _value._taxiStart
           : taxiStart // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       taxiOneKm: null == taxiOneKm
           ? _value._taxiOneKm
           : taxiOneKm // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       gasoline: null == gasoline
           ? _value._gasoline
           : gasoline // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       volkswagenGolf: null == volkswagenGolf
           ? _value._volkswagenGolf
           : volkswagenGolf // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
       toyotaCorolla: null == toyotaCorolla
           ? _value._toyotaCorolla
           : toyotaCorolla // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>,
     ));
   }
 }
@@ -173,13 +173,13 @@ class __$$_TransportationModelCopyWithImpl<$Res>
 
 class _$_TransportationModel implements _TransportationModel {
   const _$_TransportationModel(
-      {required final List<String> ticket,
-      required final List<String> pass,
-      required final List<String> taxiStart,
-      required final List<String> taxiOneKm,
-      required final List<String> gasoline,
-      required final List<String> volkswagenGolf,
-      required final List<String> toyotaCorolla})
+      {required final List<String?> ticket,
+      required final List<String?> pass,
+      required final List<String?> taxiStart,
+      required final List<String?> taxiOneKm,
+      required final List<String?> gasoline,
+      required final List<String?> volkswagenGolf,
+      required final List<String?> toyotaCorolla})
       : _ticket = ticket,
         _pass = pass,
         _taxiStart = taxiStart,
@@ -188,57 +188,57 @@ class _$_TransportationModel implements _TransportationModel {
         _volkswagenGolf = volkswagenGolf,
         _toyotaCorolla = toyotaCorolla;
 
-  final List<String> _ticket;
+  final List<String?> _ticket;
   @override
-  List<String> get ticket {
+  List<String?> get ticket {
     if (_ticket is EqualUnmodifiableListView) return _ticket;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_ticket);
   }
 
-  final List<String> _pass;
+  final List<String?> _pass;
   @override
-  List<String> get pass {
+  List<String?> get pass {
     if (_pass is EqualUnmodifiableListView) return _pass;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_pass);
   }
 
-  final List<String> _taxiStart;
+  final List<String?> _taxiStart;
   @override
-  List<String> get taxiStart {
+  List<String?> get taxiStart {
     if (_taxiStart is EqualUnmodifiableListView) return _taxiStart;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_taxiStart);
   }
 
-  final List<String> _taxiOneKm;
+  final List<String?> _taxiOneKm;
   @override
-  List<String> get taxiOneKm {
+  List<String?> get taxiOneKm {
     if (_taxiOneKm is EqualUnmodifiableListView) return _taxiOneKm;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_taxiOneKm);
   }
 
-  final List<String> _gasoline;
+  final List<String?> _gasoline;
   @override
-  List<String> get gasoline {
+  List<String?> get gasoline {
     if (_gasoline is EqualUnmodifiableListView) return _gasoline;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_gasoline);
   }
 
-  final List<String> _volkswagenGolf;
+  final List<String?> _volkswagenGolf;
   @override
-  List<String> get volkswagenGolf {
+  List<String?> get volkswagenGolf {
     if (_volkswagenGolf is EqualUnmodifiableListView) return _volkswagenGolf;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_volkswagenGolf);
   }
 
-  final List<String> _toyotaCorolla;
+  final List<String?> _toyotaCorolla;
   @override
-  List<String> get toyotaCorolla {
+  List<String?> get toyotaCorolla {
     if (_toyotaCorolla is EqualUnmodifiableListView) return _toyotaCorolla;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_toyotaCorolla);
@@ -288,28 +288,28 @@ class _$_TransportationModel implements _TransportationModel {
 
 abstract class _TransportationModel implements TransportationModel {
   const factory _TransportationModel(
-      {required final List<String> ticket,
-      required final List<String> pass,
-      required final List<String> taxiStart,
-      required final List<String> taxiOneKm,
-      required final List<String> gasoline,
-      required final List<String> volkswagenGolf,
-      required final List<String> toyotaCorolla}) = _$_TransportationModel;
+      {required final List<String?> ticket,
+      required final List<String?> pass,
+      required final List<String?> taxiStart,
+      required final List<String?> taxiOneKm,
+      required final List<String?> gasoline,
+      required final List<String?> volkswagenGolf,
+      required final List<String?> toyotaCorolla}) = _$_TransportationModel;
 
   @override
-  List<String> get ticket;
+  List<String?> get ticket;
   @override
-  List<String> get pass;
+  List<String?> get pass;
   @override
-  List<String> get taxiStart;
+  List<String?> get taxiStart;
   @override
-  List<String> get taxiOneKm;
+  List<String?> get taxiOneKm;
   @override
-  List<String> get gasoline;
+  List<String?> get gasoline;
   @override
-  List<String> get volkswagenGolf;
+  List<String?> get volkswagenGolf;
   @override
-  List<String> get toyotaCorolla;
+  List<String?> get toyotaCorolla;
   @override
   @JsonKey(ignore: true)
   _$$_TransportationModelCopyWith<_$_TransportationModel> get copyWith =>

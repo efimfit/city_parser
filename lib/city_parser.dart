@@ -7,10 +7,8 @@ import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
 
 import 'src/init_city_model.dart';
-import 'src/urls.dart';
 import 'src/models/city_model.dart';
 import 'src/utils.dart';
-import 'src/currencry_exception.dart';
 import 'src/currencies_list.dart';
 
 class CityParser {
@@ -31,10 +29,6 @@ class CityParser {
 
   static Future<CityModel> fetchCityInformation(int id,
       [String currency = 'USD']) async {
-    if (!getCurrenciesList().contains(currency)) {
-      throw InvalidCurrencyException();
-    }
-
     var url = urlDecoder(id: id);
     var response = await http.get(Uri.parse(url));
     var document = parser.parse(response.body);

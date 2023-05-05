@@ -6,7 +6,7 @@ void main(List<String> args) async {
     print(el);
   }
 
-  final cityModel = await CityParser.fetchCityInformation(6101);
+  final cityModel = await CityParser.fetchCityInformation(autocomplete[0].id);
   print(cityModel.estimatedCosts);
   print(cityModel.apartmentModel);
   //etc...

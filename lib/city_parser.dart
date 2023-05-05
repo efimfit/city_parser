@@ -12,6 +12,8 @@ import 'src/init_city_model.dart';
 import 'src/urls.dart';
 import 'src/models/city_model.dart';
 import 'src/utils.dart';
+import 'src/currencry_exception.dart';
+import 'src/currencies_list.dart';
 
 class CityParser {
   static Future<List<SuggestionCityModel>> getAutocompleteTips(
@@ -32,7 +34,12 @@ class CityParser {
     return autocomplete;
   }
 
-  static Future<CityModel> fetchCityInformation(int id) async {
+  static Future<CityModel> fetchCityInformation(int id,
+      [String currency = 'USD']) async {
+    if (await isCurrencyValid(currency, getCurrenciesList()) == false) {
+      throw InvalidCurrencyException();
+    }
+
     List<int> decodedBytes = base64.decode(fetchCityInformationUrl);
     String decodedStr = utf8.decode(decodedBytes);
     var url = '$decodedStr$id';
@@ -41,7 +48,7 @@ class CityParser {
     var document = parser.parse(response.body);
     final urlRow = document.querySelectorAll('link');
 
-    url = '${urlRow[0].attributes['href']}?displayCurrency=USD';
+    url = '${urlRow[0].attributes['href']}?displayCurrency=$currency';
     response = await http.get(Uri.parse(url));
     document = parser.parse(response.body);
     final allRowsHtml = document.querySelectorAll('tr');
@@ -76,5 +83,9 @@ class CityParser {
         rentData,
         buyApartmentData,
         salariesData);
+  }
+
+  static List<String> getCurrenciesList() {
+    return currenciesList;
   }
 }

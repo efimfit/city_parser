@@ -19,3 +19,4 @@ dependencies:
   freezed_annotation: ^2.2.0
   html: ^0.15.3
   http: ^0.13.6
+

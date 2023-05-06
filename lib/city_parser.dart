@@ -1,5 +1,7 @@
 library city_parser;
 
+export 'src/models/models.dart';
+
 import 'dart:convert';
 
 import 'package:city_parser/src/models/suggestion_city_model.dart';

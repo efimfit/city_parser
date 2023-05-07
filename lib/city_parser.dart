@@ -5,6 +5,7 @@ export 'src/models/city_model.dart';
 import 'dart:convert';
 
 import 'package:city_parser/src/models/suggestion_city_model.dart';
+import 'package:html/dom.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
 
@@ -32,12 +33,13 @@ class CityParser {
       [String currency = 'USD']) async {
     var url = urlDecoder(id: id);
     var response = await http.get(Uri.parse(url));
-    var document = parser.parse(response.body);
-    final urlRow = document.querySelectorAll('link');
+    final urlRow =
+        parser.parse(response.body).querySelector('meta[property="og:url"]');
+    final fetchedUrl = urlRow?.attributes['content'];
 
-    url = '${urlRow[0].attributes['href']}?displayCurrency=$currency';
+    url = '$fetchedUrl?displayCurrency=$currency';
     response = await http.get(Uri.parse(url));
-    document = parser.parse(response.body);
+    final document = parser.parse(response.body);
 
     return CityModel(categories: getCosts(document));
   }

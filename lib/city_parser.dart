@@ -1,11 +1,11 @@
 library city_parser;
 
 export 'src/models/city_model.dart';
+export 'src/models/suggestion_city_model.dart';
 
 import 'dart:convert';
 
 import 'package:city_parser/src/models/suggestion_city_model.dart';
-import 'package:html/dom.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
 

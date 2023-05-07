@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$CityModel {
-  List<List<String?>> get categories => throw _privateConstructorUsedError;
+  List<CategoryGroupModel> get categories => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CityModelCopyWith<CityModel> get copyWith =>
@@ -28,7 +28,7 @@ abstract class $CityModelCopyWith<$Res> {
   factory $CityModelCopyWith(CityModel value, $Res Function(CityModel) then) =
       _$CityModelCopyWithImpl<$Res, CityModel>;
   @useResult
-  $Res call({List<List<String?>> categories});
+  $Res call({List<CategoryGroupModel> categories});
 }
 
 /// @nodoc
@@ -50,7 +50,7 @@ class _$CityModelCopyWithImpl<$Res, $Val extends CityModel>
       categories: null == categories
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
-              as List<List<String?>>,
+              as List<CategoryGroupModel>,
     ) as $Val);
   }
 }
@@ -62,7 +62,7 @@ abstract class _$$_CityModelCopyWith<$Res> implements $CityModelCopyWith<$Res> {
       __$$_CityModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<List<String?>> categories});
+  $Res call({List<CategoryGroupModel> categories});
 }
 
 /// @nodoc
@@ -82,7 +82,7 @@ class __$$_CityModelCopyWithImpl<$Res>
       categories: null == categories
           ? _value._categories
           : categories // ignore: cast_nullable_to_non_nullable
-              as List<List<String?>>,
+              as List<CategoryGroupModel>,
     ));
   }
 }
@@ -90,12 +90,12 @@ class __$$_CityModelCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CityModel implements _CityModel {
-  const _$_CityModel({required final List<List<String?>> categories})
+  const _$_CityModel({required final List<CategoryGroupModel> categories})
       : _categories = categories;
 
-  final List<List<String?>> _categories;
+  final List<CategoryGroupModel> _categories;
   @override
-  List<List<String?>> get categories {
+  List<CategoryGroupModel> get categories {
     if (_categories is EqualUnmodifiableListView) return _categories;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_categories);
@@ -127,11 +127,11 @@ class _$_CityModel implements _CityModel {
 }
 
 abstract class _CityModel implements CityModel {
-  const factory _CityModel({required final List<List<String?>> categories}) =
-      _$_CityModel;
+  const factory _CityModel(
+      {required final List<CategoryGroupModel> categories}) = _$_CityModel;
 
   @override
-  List<List<String?>> get categories;
+  List<CategoryGroupModel> get categories;
   @override
   @JsonKey(ignore: true)
   _$$_CityModelCopyWith<_$_CityModel> get copyWith =>

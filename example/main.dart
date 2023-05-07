@@ -9,7 +9,8 @@ void main(List<String> args) async {
   final currency = 'USD';
   final cityModel =
       await CityParser.fetchCityInformation(autocomplete[0].id, currency);
-  print(cityModel.categories);
-
-  //etc...
+  for (var element in cityModel.categories) {
+    print(element);
+    print('\n');
+  }
 }

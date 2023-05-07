@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:city_parser/src/models/category_element_model.dart';
+import 'package:city_parser/src/models/category_group_model.dart';
 import 'package:html/dom.dart';
 
 import 'urls.dart';
@@ -21,22 +23,22 @@ String urlDecoder({int id = 0, String input = ''}) {
   return url;
 }
 
-List<List<String?>> getCosts(Document document) {
+List<CategoryGroupModel> getCosts(Document document) {
   final tableRows = document
       .getElementsByClassName('data_wide_table new_bar_table')[0]
       .querySelectorAll('tr');
 
-  List<List<String?>> categories = [];
-  List<String?> category = [];
+  List<CategoryGroupModel> categoryGroups = [];
+  var model = CategoryGroupModel(label: '', elements: []);
 
   for (var element in tableRows) {
     final categoryTitle = element.getElementsByClassName('category_title');
     if (categoryTitle.isNotEmpty) {
-      if (category.isNotEmpty) {
-        categories.add(category);
-        category = [];
+      if (model.label.isNotEmpty) {
+        categoryGroups.add(model);
+        model = model.copyWith(label: '', elements: []);
       }
-      category.add(categoryTitle[0].text);
+      model = model.copyWith(label: categoryTitle[0].text);
     } else {
       final categoryItem = element.querySelectorAll('td');
       final label = categoryItem[0].text.trim();
@@ -44,28 +46,39 @@ List<List<String?>> getCosts(Document document) {
           .text
           .replaceAll('\u00a0', String.fromCharCode(32))
           .replaceAll(',', '');
-      price = price.substring(0, price.indexOf('.') + 3);
-      category.addAll([label, price == ' ?' ? null : price]);
+      price = price.substring(0, price.indexOf('.') + 3).replaceAll(' ?', '');
+      model = model.copyWith(elements: [
+        ...model.elements,
+        CategoryElementModel(label: label, value: price)
+      ]);
     }
   }
-  if (category.isNotEmpty) {
-    categories.add(category);
+  if (model.label.isNotEmpty) {
+    categoryGroups.add(model);
+    model = model.copyWith(label: 'Estimated costs', elements: []);
   }
 
-  List<String?> estimatedCosts = [];
   final summaryRows = document.getElementsByClassName('emp_number');
   if (summaryRows.isNotEmpty) {
-    estimatedCosts.add('Estimated costs');
     for (var i = 0; i < 2; i++) {
-      i == 0
-          ? estimatedCosts.add('Family of four')
-          : estimatedCosts.add('Single person');
-      var cost = summaryRows[i].text.replaceAll(',', '');
-      cost = cost.substring(0, cost.indexOf('.') + 2);
-      estimatedCosts.add(cost);
+      String cost = '';
+      if (i == 0) {
+        cost = summaryRows[i].text.replaceAll(',', '');
+        cost = cost.substring(0, cost.indexOf('.') + 2);
+        model = model.copyWith(elements: [
+          CategoryElementModel(label: 'Family of four', value: cost)
+        ]);
+      } else {
+        cost = summaryRows[i].text.replaceAll(',', '');
+        cost = cost.substring(0, cost.indexOf('.') + 2);
+        model = model.copyWith(elements: [
+          ...model.elements,
+          CategoryElementModel(label: 'Single person', value: cost)
+        ]);
+      }
     }
   }
-  categories.insert(0, estimatedCosts);
+  categoryGroups.insert(0, model);
 
-  return categories;
+  return categoryGroups;
 }

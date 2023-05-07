@@ -2,6 +2,7 @@ library city_parser;
 
 export 'src/models/city_model.dart';
 export 'src/models/suggestion_city_model.dart';
+export 'src/currencies_list.dart';
 
 import 'dart:convert';
 

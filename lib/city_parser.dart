@@ -20,7 +20,12 @@ class CityParser {
   static Future<List<SuggestionCityModel>> getAutocompleteTips(
       String input) async {
     final url = urlDecoder(input: input);
-    final response = await http.get(Uri.parse(url));
+    final response = await http.get(
+      Uri.parse(url),
+      headers: {
+        'Access-Control-Allow-Origin': 'https://cityfit.absolut-novoros.ru',
+      },
+    );
     final jsonData = json.decode(response.body);
     final List<SuggestionCityModel> autocomplete = [];
 
@@ -35,13 +40,17 @@ class CityParser {
   static Future<CityModel> fetchCityInformation(int id,
       [String currency = 'USD']) async {
     var url = urlDecoder(id: id);
-    var response = await http.get(Uri.parse(url));
+    var response = await http.get(Uri.parse(url), headers: {
+      'Access-Control-Allow-Origin': 'https://cityfit.absolut-novoros.ru',
+    });
     final urlRow =
         parser.parse(response.body).querySelector('meta[property="og:url"]');
     final fetchedUrl = urlRow?.attributes['content'];
 
     url = '$fetchedUrl?displayCurrency=$currency';
-    response = await http.get(Uri.parse(url));
+    response = await http.get(Uri.parse(url), headers: {
+      'Access-Control-Allow-Origin': 'https://cityfit.absolut-novoros.ru',
+    });
     final document = parser.parse(response.body);
 
     return CityModel(categories: getCosts(document));

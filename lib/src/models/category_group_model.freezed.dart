@@ -14,11 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+CategoryGroupModel _$CategoryGroupModelFromJson(Map<String, dynamic> json) {
+  return _CategoryGroupModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$CategoryGroupModel {
   String get label => throw _privateConstructorUsedError;
   List<CategoryElementModel> get elements => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CategoryGroupModelCopyWith<CategoryGroupModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -101,11 +106,14 @@ class __$$_CategoryGroupModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CategoryGroupModel implements _CategoryGroupModel {
   const _$_CategoryGroupModel(
       {required this.label, required final List<CategoryElementModel> elements})
       : _elements = elements;
+
+  factory _$_CategoryGroupModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CategoryGroupModelFromJson(json);
 
   @override
   final String label;
@@ -131,6 +139,7 @@ class _$_CategoryGroupModel implements _CategoryGroupModel {
             const DeepCollectionEquality().equals(other._elements, _elements));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, label, const DeepCollectionEquality().hash(_elements));
@@ -141,6 +150,13 @@ class _$_CategoryGroupModel implements _CategoryGroupModel {
   _$$_CategoryGroupModelCopyWith<_$_CategoryGroupModel> get copyWith =>
       __$$_CategoryGroupModelCopyWithImpl<_$_CategoryGroupModel>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CategoryGroupModelToJson(
+      this,
+    );
+  }
 }
 
 abstract class _CategoryGroupModel implements CategoryGroupModel {
@@ -148,6 +164,9 @@ abstract class _CategoryGroupModel implements CategoryGroupModel {
           {required final String label,
           required final List<CategoryElementModel> elements}) =
       _$_CategoryGroupModel;
+
+  factory _CategoryGroupModel.fromJson(Map<String, dynamic> json) =
+      _$_CategoryGroupModel.fromJson;
 
   @override
   String get label;

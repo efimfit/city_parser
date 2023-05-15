@@ -19,4 +19,6 @@ dependencies:
   freezed_annotation: ^2.2.0
   html: ^0.15.3
   http: ^0.13.6
+  json_serializable: ^6.6.2
+  mongo_dart: ^0.9.1
 

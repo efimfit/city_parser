@@ -14,11 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+SuggestionCityModel _$SuggestionCityModelFromJson(Map<String, dynamic> json) {
+  return _SuggestionCityModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$SuggestionCityModel {
   String get label => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SuggestionCityModelCopyWith<SuggestionCityModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -101,9 +106,12 @@ class __$$_SuggestionCityModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SuggestionCityModel implements _SuggestionCityModel {
   const _$_SuggestionCityModel({required this.label, required this.id});
+
+  factory _$_SuggestionCityModel.fromJson(Map<String, dynamic> json) =>
+      _$$_SuggestionCityModelFromJson(json);
 
   @override
   final String label;
@@ -124,6 +132,7 @@ class _$_SuggestionCityModel implements _SuggestionCityModel {
             (identical(other.id, id) || other.id == id));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, label, id);
 
@@ -133,12 +142,22 @@ class _$_SuggestionCityModel implements _SuggestionCityModel {
   _$$_SuggestionCityModelCopyWith<_$_SuggestionCityModel> get copyWith =>
       __$$_SuggestionCityModelCopyWithImpl<_$_SuggestionCityModel>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SuggestionCityModelToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SuggestionCityModel implements SuggestionCityModel {
   const factory _SuggestionCityModel(
       {required final String label,
       required final int id}) = _$_SuggestionCityModel;
+
+  factory _SuggestionCityModel.fromJson(Map<String, dynamic> json) =
+      _$_SuggestionCityModel.fromJson;
 
   @override
   String get label;

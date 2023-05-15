@@ -14,10 +14,17 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+CityModel _$CityModelFromJson(Map<String, dynamic> json) {
+  return _CityModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$CityModel {
+  String get label => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   List<CategoryGroupModel> get categories => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CityModelCopyWith<CityModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -28,7 +35,7 @@ abstract class $CityModelCopyWith<$Res> {
   factory $CityModelCopyWith(CityModel value, $Res Function(CityModel) then) =
       _$CityModelCopyWithImpl<$Res, CityModel>;
   @useResult
-  $Res call({List<CategoryGroupModel> categories});
+  $Res call({String label, int id, List<CategoryGroupModel> categories});
 }
 
 /// @nodoc
@@ -44,9 +51,19 @@ class _$CityModelCopyWithImpl<$Res, $Val extends CityModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? label = null,
+    Object? id = null,
     Object? categories = null,
   }) {
     return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       categories: null == categories
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
@@ -62,7 +79,7 @@ abstract class _$$_CityModelCopyWith<$Res> implements $CityModelCopyWith<$Res> {
       __$$_CityModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<CategoryGroupModel> categories});
+  $Res call({String label, int id, List<CategoryGroupModel> categories});
 }
 
 /// @nodoc
@@ -76,9 +93,19 @@ class __$$_CityModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? label = null,
+    Object? id = null,
     Object? categories = null,
   }) {
     return _then(_$_CityModel(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       categories: null == categories
           ? _value._categories
           : categories // ignore: cast_nullable_to_non_nullable
@@ -88,11 +115,21 @@ class __$$_CityModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CityModel implements _CityModel {
-  const _$_CityModel({required final List<CategoryGroupModel> categories})
+  const _$_CityModel(
+      {required this.label,
+      required this.id,
+      required final List<CategoryGroupModel> categories})
       : _categories = categories;
 
+  factory _$_CityModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CityModelFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final int id;
   final List<CategoryGroupModel> _categories;
   @override
   List<CategoryGroupModel> get categories {
@@ -103,7 +140,7 @@ class _$_CityModel implements _CityModel {
 
   @override
   String toString() {
-    return 'CityModel(categories: $categories)';
+    return 'CityModel(label: $label, id: $id, categories: $categories)';
   }
 
   @override
@@ -111,25 +148,44 @@ class _$_CityModel implements _CityModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CityModel &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._categories, _categories));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_categories));
+      runtimeType, label, id, const DeepCollectionEquality().hash(_categories));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$_CityModelCopyWith<_$_CityModel> get copyWith =>
       __$$_CityModelCopyWithImpl<_$_CityModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CityModelToJson(
+      this,
+    );
+  }
 }
 
 abstract class _CityModel implements CityModel {
   const factory _CityModel(
-      {required final List<CategoryGroupModel> categories}) = _$_CityModel;
+      {required final String label,
+      required final int id,
+      required final List<CategoryGroupModel> categories}) = _$_CityModel;
 
+  factory _CityModel.fromJson(Map<String, dynamic> json) =
+      _$_CityModel.fromJson;
+
+  @override
+  String get label;
+  @override
+  int get id;
   @override
   List<CategoryGroupModel> get categories;
   @override

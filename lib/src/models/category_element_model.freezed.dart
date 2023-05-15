@@ -14,11 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+CategoryElementModel _$CategoryElementModelFromJson(Map<String, dynamic> json) {
+  return _CategoryElementModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$CategoryElementModel {
   String get label => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CategoryElementModelCopyWith<CategoryElementModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -102,9 +107,12 @@ class __$$_CategoryElementModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CategoryElementModel implements _CategoryElementModel {
   const _$_CategoryElementModel({required this.label, required this.value});
+
+  factory _$_CategoryElementModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CategoryElementModelFromJson(json);
 
   @override
   final String label;
@@ -125,6 +133,7 @@ class _$_CategoryElementModel implements _CategoryElementModel {
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, label, value);
 
@@ -134,12 +143,22 @@ class _$_CategoryElementModel implements _CategoryElementModel {
   _$$_CategoryElementModelCopyWith<_$_CategoryElementModel> get copyWith =>
       __$$_CategoryElementModelCopyWithImpl<_$_CategoryElementModel>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CategoryElementModelToJson(
+      this,
+    );
+  }
 }
 
 abstract class _CategoryElementModel implements CategoryElementModel {
   const factory _CategoryElementModel(
       {required final String label,
       required final String value}) = _$_CategoryElementModel;
+
+  factory _CategoryElementModel.fromJson(Map<String, dynamic> json) =
+      _$_CategoryElementModel.fromJson;
 
   @override
   String get label;

@@ -59,7 +59,7 @@ List<CategoryGroupModel> getCosts(Document document) {
   }
 
   final summaryRows = document.getElementsByClassName('emp_number');
-  if (summaryRows.isNotEmpty) {
+  if (summaryRows.length > 1) {
     for (var i = 0; i < 2; i++) {
       String cost = '';
       if (i == 0) {

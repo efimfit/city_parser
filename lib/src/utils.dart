@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:city_parser/src/models/category_element_model.dart';
-import 'package:city_parser/src/models/category_group_model.dart';
+import 'package:city_parser/src/models/cost_category_model.dart';
 import 'package:html/dom.dart';
 
 import 'urls.dart';
@@ -23,13 +23,13 @@ String urlDecoder({int id = 0, String input = ''}) {
   return url;
 }
 
-List<CategoryGroupModel> getCosts(Document document) {
+List<CostCategoryModel> getCosts(Document document) {
   final tableRows = document
       .getElementsByClassName('data_wide_table new_bar_table')[0]
       .querySelectorAll('tr');
 
-  List<CategoryGroupModel> categoryGroups = [];
-  var model = CategoryGroupModel(label: '', elements: []);
+  List<CostCategoryModel> categoryGroups = [];
+  var model = CostCategoryModel(label: '', elements: []);
 
   for (var element in tableRows) {
     final categoryTitle = element.getElementsByClassName('category_title');

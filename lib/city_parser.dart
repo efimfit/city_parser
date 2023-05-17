@@ -2,7 +2,7 @@ library city_parser;
 
 export 'src/models/city_model.dart';
 export 'src/models/suggestion_city_model.dart';
-export 'src/models/category_group_model.dart';
+export 'src/models/cost_category_model.dart';
 export 'src/models/category_element_model.dart';
 
 import 'dart:convert';
@@ -83,7 +83,7 @@ class CityParser {
     final document = parser.parse(response.body);
 
     return CityModel(
-        categories: getCosts(document),
+        costCategories: getCosts(document),
         label: suggestionCityModel.label,
         id: suggestionCityModel.id);
   }

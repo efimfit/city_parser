@@ -22,7 +22,8 @@ CityModel _$CityModelFromJson(Map<String, dynamic> json) {
 mixin _$CityModel {
   String get label => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
-  List<CategoryGroupModel> get categories => throw _privateConstructorUsedError;
+  List<CostCategoryModel> get costCategories =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,7 @@ abstract class $CityModelCopyWith<$Res> {
   factory $CityModelCopyWith(CityModel value, $Res Function(CityModel) then) =
       _$CityModelCopyWithImpl<$Res, CityModel>;
   @useResult
-  $Res call({String label, int id, List<CategoryGroupModel> categories});
+  $Res call({String label, int id, List<CostCategoryModel> costCategories});
 }
 
 /// @nodoc
@@ -53,7 +54,7 @@ class _$CityModelCopyWithImpl<$Res, $Val extends CityModel>
   $Res call({
     Object? label = null,
     Object? id = null,
-    Object? categories = null,
+    Object? costCategories = null,
   }) {
     return _then(_value.copyWith(
       label: null == label
@@ -64,10 +65,10 @@ class _$CityModelCopyWithImpl<$Res, $Val extends CityModel>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      categories: null == categories
-          ? _value.categories
-          : categories // ignore: cast_nullable_to_non_nullable
-              as List<CategoryGroupModel>,
+      costCategories: null == costCategories
+          ? _value.costCategories
+          : costCategories // ignore: cast_nullable_to_non_nullable
+              as List<CostCategoryModel>,
     ) as $Val);
   }
 }
@@ -79,7 +80,7 @@ abstract class _$$_CityModelCopyWith<$Res> implements $CityModelCopyWith<$Res> {
       __$$_CityModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String label, int id, List<CategoryGroupModel> categories});
+  $Res call({String label, int id, List<CostCategoryModel> costCategories});
 }
 
 /// @nodoc
@@ -95,7 +96,7 @@ class __$$_CityModelCopyWithImpl<$Res>
   $Res call({
     Object? label = null,
     Object? id = null,
-    Object? categories = null,
+    Object? costCategories = null,
   }) {
     return _then(_$_CityModel(
       label: null == label
@@ -106,10 +107,10 @@ class __$$_CityModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      categories: null == categories
-          ? _value._categories
-          : categories // ignore: cast_nullable_to_non_nullable
-              as List<CategoryGroupModel>,
+      costCategories: null == costCategories
+          ? _value._costCategories
+          : costCategories // ignore: cast_nullable_to_non_nullable
+              as List<CostCategoryModel>,
     ));
   }
 }
@@ -120,8 +121,8 @@ class _$_CityModel implements _CityModel {
   const _$_CityModel(
       {required this.label,
       required this.id,
-      required final List<CategoryGroupModel> categories})
-      : _categories = categories;
+      required final List<CostCategoryModel> costCategories})
+      : _costCategories = costCategories;
 
   factory _$_CityModel.fromJson(Map<String, dynamic> json) =>
       _$$_CityModelFromJson(json);
@@ -130,17 +131,17 @@ class _$_CityModel implements _CityModel {
   final String label;
   @override
   final int id;
-  final List<CategoryGroupModel> _categories;
+  final List<CostCategoryModel> _costCategories;
   @override
-  List<CategoryGroupModel> get categories {
-    if (_categories is EqualUnmodifiableListView) return _categories;
+  List<CostCategoryModel> get costCategories {
+    if (_costCategories is EqualUnmodifiableListView) return _costCategories;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_categories);
+    return EqualUnmodifiableListView(_costCategories);
   }
 
   @override
   String toString() {
-    return 'CityModel(label: $label, id: $id, categories: $categories)';
+    return 'CityModel(label: $label, id: $id, costCategories: $costCategories)';
   }
 
   @override
@@ -151,13 +152,13 @@ class _$_CityModel implements _CityModel {
             (identical(other.label, label) || other.label == label) &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._categories, _categories));
+                .equals(other._costCategories, _costCategories));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, label, id, const DeepCollectionEquality().hash(_categories));
+  int get hashCode => Object.hash(runtimeType, label, id,
+      const DeepCollectionEquality().hash(_costCategories));
 
   @JsonKey(ignore: true)
   @override
@@ -177,7 +178,7 @@ abstract class _CityModel implements CityModel {
   const factory _CityModel(
       {required final String label,
       required final int id,
-      required final List<CategoryGroupModel> categories}) = _$_CityModel;
+      required final List<CostCategoryModel> costCategories}) = _$_CityModel;
 
   factory _CityModel.fromJson(Map<String, dynamic> json) =
       _$_CityModel.fromJson;
@@ -187,7 +188,7 @@ abstract class _CityModel implements CityModel {
   @override
   int get id;
   @override
-  List<CategoryGroupModel> get categories;
+  List<CostCategoryModel> get costCategories;
   @override
   @JsonKey(ignore: true)
   _$$_CityModelCopyWith<_$_CityModel> get copyWith =>

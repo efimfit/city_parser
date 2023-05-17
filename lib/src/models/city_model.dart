@@ -1,4 +1,4 @@
-import 'package:city_parser/src/models/category_group_model.dart';
+import 'package:city_parser/src/models/cost_category_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'city_model.freezed.dart';
@@ -9,7 +9,7 @@ class CityModel with _$CityModel {
   const factory CityModel({
     required String label,
     required int id,
-    required List<CategoryGroupModel> categories,
+    required List<CostCategoryModel> costCategories,
   }) = _CityModel;
 
   factory CityModel.fromJson(Map<String, dynamic> json) =>

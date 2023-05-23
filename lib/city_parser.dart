@@ -62,13 +62,6 @@ class CityParser {
   //   return cityList;
   // }
 
-  static Future<CityModel> fetchCityModel(
-      SuggestionCityModel suggestionCityModel) async {
-    final cityModel =
-        await CityParser.fetchCityInformation(suggestionCityModel);
-    return cityModel;
-  }
-
   static Future<CityModel> fetchCityInformation(
       SuggestionCityModel suggestionCityModel,
       [String currency = 'USD']) async {

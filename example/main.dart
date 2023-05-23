@@ -42,6 +42,7 @@ void parseCities() async {
       .querySelectorAll('option')
       .sublist(1);
 
+  var index = 0;
   List<String> cities = [];
   for (var element in countryList) {
     url =
@@ -54,6 +55,7 @@ void parseCities() async {
         cityList.map((e) => e.trim()).toList().sublist(2, cityList.length - 1);
     for (var city in cityList) {
       cities.add(city);
+      print(index++);
     }
   }
   String jsonCityList = jsonEncode(cities);
@@ -101,6 +103,7 @@ void initIsolatesGetSuggestions() async {
 
 void combineSuggestionsLists() {
   List<SuggestionCityModel> suggestionsList = [];
+
   for (var i = 5; i < 80; i = i + 5) {
     List<dynamic> cityList = jsonDecode(
         File('suggestions/suggestions_${i}00.json').readAsStringSync());
@@ -110,7 +113,7 @@ void combineSuggestionsLists() {
     }
   }
   List<dynamic> cityList =
-      jsonDecode(File('suggestions/suggestions_7873.json').readAsStringSync());
+      jsonDecode(File('suggestions/suggestions_7876.json').readAsStringSync());
   for (Map<String, dynamic> el in cityList) {
     final model = SuggestionCityModel.fromJson(el);
     suggestionsList.add(model);
@@ -129,7 +132,7 @@ Future<void> getCityModels(List<dynamic> args) async {
   for (var i = index; i < index + 500; i++) {
     print(i);
 
-    CityModel cityModel = await CityParser.fetchCityModel(suggestions[i]);
+    CityModel cityModel = await CityParser.fetchCityInformation(suggestions[i]);
     totalCityModelList.add(cityModel);
     if ((i != 0 && i + 1 == index + 500) || i + 1 == suggestions.length) {
       print('end $i');
@@ -170,7 +173,7 @@ void combineCityModelsLists() {
     }
   }
   List<dynamic> modelsList =
-      jsonDecode(File('city_models/7725.json').readAsStringSync());
+      jsonDecode(File('city_models/7729.json').readAsStringSync());
   for (Map<String, dynamic> el in modelsList) {
     final model = CityModel.fromJson(el);
     cityModelList.add(model);

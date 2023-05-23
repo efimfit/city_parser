@@ -58,19 +58,22 @@ List<CostCategoryModel> getCosts(Document document) {
     model = model.copyWith(label: 'Estimated costs', elements: []);
   }
 
+  final regex = RegExp(r'(\d+\.\d+)(?=\$)');
   final summaryRows = document.getElementsByClassName('emp_number');
   if (summaryRows.length > 1) {
     for (var i = 0; i < 2; i++) {
       String cost = '';
       if (i == 0) {
         cost = summaryRows[i].text.replaceAll(',', '');
-        cost = cost.substring(0, cost.indexOf('.') + 2);
+        final match = regex.firstMatch(cost)!;
+        cost = match[0] ?? '0';
         model = model.copyWith(elements: [
           CategoryElementModel(label: 'Family of four', value: cost)
         ]);
       } else {
         cost = summaryRows[i].text.replaceAll(',', '');
-        cost = cost.substring(0, cost.indexOf('.') + 2);
+        final match = regex.firstMatch(cost)!;
+        cost = match[0] ?? '0';
         model = model.copyWith(elements: [
           ...model.elements,
           CategoryElementModel(label: 'Single person', value: cost)
